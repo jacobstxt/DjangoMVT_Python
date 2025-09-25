@@ -53,7 +53,6 @@ py manage.py runserver 4892
 pip install Pillow
 py manage.py makemigrations categories
 py manage.py migrate
-
 ```
 
 
@@ -64,5 +63,4 @@ py manage.py createsuperuser
 admin
 123456
 py manage.py runserver 4892
-
 ```
