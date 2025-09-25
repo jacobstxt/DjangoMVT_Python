@@ -60,7 +60,7 @@ py manage.py migrate
 ```
 python manage.py createsuperuser
 py manage.py createsuperuser
-admin
-123456
+Admin
+A123456!
 py manage.py runserver 4892
 ```
