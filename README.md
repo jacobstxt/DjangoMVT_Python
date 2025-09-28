@@ -1,10 +1,10 @@
-# Simple MVT
+# Проєкт Simple MVT
 ```
 py --version
 py -m venv .venv
 ```
 
-## Activate venv
+## Активую env
 ```
 .venv\Scripts\activate.bat
 python.exe -m pip install --upgrade pip
@@ -29,7 +29,7 @@ py manage.py startapp users
 deactivate
 ```
 
-## Clone Project
+## Клонування проєкту
 ```
 .venv\Scripts\activate.bat
 pip freeze
@@ -64,4 +64,11 @@ Admin
 Admin@gmail.com
 A123456!
 py manage.py runserver 4892
+```
+
+## Додаю продукти і фото до них
+```
+py manage.py startapp products
+py manage.py makemigrations products
+py manage.py migrate
 ```
