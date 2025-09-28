@@ -61,6 +61,7 @@ py manage.py migrate
 python manage.py createsuperuser
 py manage.py createsuperuser
 Admin
+Admin@gmail.com
 A123456!
 py manage.py runserver 4892
 ```
