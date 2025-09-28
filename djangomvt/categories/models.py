@@ -5,6 +5,7 @@ from django.core.files.base import ContentFile
 from PIL import Image
 from django.db import models
 from django.utils.text import slugify
+from unidecode import unidecode
 
 # Create your models here.
 class Category(models.Model):
@@ -38,8 +39,9 @@ class Category(models.Model):
 
             self.image.save(filename, ContentFile(buffer.read()), save=False)
 
+            
         if not self.slug:
-            base_slug = slugify(self.name, allow_unicode=True)
+            base_slug = slugify(unidecode(self.name))
             slug = base_slug
             counter = 1
             while Category.objects.filter(slug=slug).exists():
