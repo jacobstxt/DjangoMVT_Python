@@ -125,6 +125,8 @@ STATICFILES_DIRS = [
     str(BASE_DIR / 'static'),
 ]
 
+
+
 IMAGES_URL = '/images/'
 
 IMAGES_ROOT = BASE_DIR / 'images'

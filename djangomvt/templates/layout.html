@@ -32,12 +32,26 @@
                 </ul>
 
                   <ul class="navbar-nav">
+                    {% if user.is_authenticated %}
+                    <li class="nav-item d-flex align-items-center">
+                    {% if user.image_small %}
+                    <img src="{{ user.image_small.url }}" alt="avatar" width="30" height="30" class="rounded-circle me-2">
+                    {% else %}
+                    <img src="{% static 'default-avatar.png' %}" alt="avatar" width="30" height="30" class="rounded-circle me-2">
+                    {% endif %}
+                    <span class="text-white">{{ user.first_name }} {{ user.last_name }}</span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'users:logout' %}">Вихід</a>
+                    </li> 
+                    {% else %}
                      <li class="nav-item">
                         <a class="nav-link" href="{% url 'users:login' %}">Вхід</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'users:register' %}">Реєстрація</a>
-                    </li>                 
+                    </li>   
+                    {% endif %}              
                 </ul>
 
             </div>

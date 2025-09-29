@@ -35,7 +35,8 @@
         {% endif %}
     </div>
 
-    <div class="mb-3">
+    <div class="row">
+    <div class="col mb-3">
         <label for="first_name" class="form-label">{{form.first_name.label}}</label>
         {{ form.first_name }}
         {% if form.first_name.errors %}
@@ -43,23 +44,18 @@
         {% endif %}
     </div>
 
-    <div class="mb-3">
+    <div class="col mb-3">
         <label for="last_name" class="form-label">{{form.last_name.label}}</label>
         {{ form.last_name }}
         {% if form.last_name.errors %}
             <div class="text-danger">{{ form.last_name.errors }}</div>
         {% endif %}
     </div>
-
-    <div class="mb-3">
-        <label for="image" class="form-label">{{form.image.label}}</label>
-        {{ form.image }}
-        {% if form.image.errors %}
-            <div class="text-danger">{{ form.image.errors }}</div>
-        {% endif %}
     </div>
 
-    <div class="mb-3">
+
+    <div class="row"> 
+    <div class="col mb-3">
         <label for="password1" class="form-label">{{form.password1.label}}</label>
         {{ form.password1 }}
         {% if form.password1.errors %}
@@ -67,11 +63,20 @@
         {% endif %}
     </div>
 
-    <div class="mb-3">
+    <div class="col mb-3">
         <label for="password2" class="form-label">{{form.password2.label}}</label>
         {{ form.password2 }}
         {% if form.password2.errors %}
             <div class="text-danger">{{ form.password2.errors }}</div>
+        {% endif %}
+    </div>
+    </div>
+
+      <div class="mb-3">
+        <label for="image" class="form-label">{{form.image.label}}</label>
+        {{ form.image }}
+        {% if form.image.errors %}
+            <div class="text-danger">{{ form.image.errors }}</div>
         {% endif %}
     </div>
 
