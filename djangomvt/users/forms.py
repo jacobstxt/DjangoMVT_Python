@@ -5,7 +5,7 @@ from django.contrib.auth.forms import AuthenticationForm
 
 class CustomUserCreationForm(UserCreationForm):
     username = forms.CharField(
-        label="Логін", 
+        label="Нік користувача", 
         widget= forms.TextInput(attrs={'class': 'form-control'})
         )
     email = forms.EmailField(

@@ -127,9 +127,8 @@ STATICFILES_DIRS = [
 
 
 
-IMAGES_URL = '/images/'
-
-IMAGES_ROOT = BASE_DIR / 'images'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 AUTH_USER_MODEL = 'users.CustomUser'
 
