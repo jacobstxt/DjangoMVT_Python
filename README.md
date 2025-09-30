@@ -31,6 +31,7 @@ deactivate
 
 ## Клонування проєкту
 ```
+py -m venv .venv
 .venv\Scripts\activate.bat
 pip freeze
 pip freeze > requirements.txt
